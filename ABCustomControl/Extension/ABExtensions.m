@@ -7,7 +7,7 @@
 //
 
 #import "ABExtensions.h"
-
+//----------------------------------------------------------------------------------------------------------------------
 @implementation NSBundle (CIG)
 
 + (NSBundle *)mainBundleCore {
@@ -24,37 +24,40 @@
 @end
 
 
-@implementation NSIndexPath (CIG)
+//----------------------------------------------------------------------------------------------------------------------
+#pragma mark - NSdata Category
+//----------------------------------------------------------------------------------------------------------------------
+@implementation NSData (Extension)
 
-+ (NSIndexPath*)indexPathForTag:(NSInteger)tag
-{
-    NSUInteger section = (tag & 0xFFFF0000) >> 16;
-    NSUInteger row = (tag & 0xFFFF);
-    
-    return [self indexPathForRow:row inSection:section];
+- (NSString *)stringWithUTF8Data {
+    NSData *data = [self copy];
+    return [[NSString alloc] initWithBytes:[data bytes] length:[data length] encoding:NSUTF8StringEncoding];
 }
 
-- (NSInteger)tag
-{
-    NSUInteger section = (self.section & 0xFFFF) << 16;
-    NSUInteger row = (self.row & 0xFFFF);
-    
-    return section | row;
+- (NSString *)stringFromData {
+    NSData *data = [self copy];
+    return [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
 }
 
-+ (NSArray *)indexPathsForRowsInRange:(NSRange)rows inSection:(NSUInteger)section
-{
-    NSMutableArray* indexPaths = [NSMutableArray array];
-    
-    NSUInteger row = rows.location;
-    for (NSUInteger currentIndex = 0; currentIndex < rows.length; ++currentIndex)
-    {
-        NSIndexPath* indexPath = [NSIndexPath indexPathForRow:row inSection:section];
-        [indexPaths addObject:indexPath];
-        ++row;
+
+@end
+
+
+//----------------------------------------------------------------------------------------------------------------------
+#pragma mark - NSNull Category
+//----------------------------------------------------------------------------------------------------------------------
+@implementation NSNull (Extension)
+
+- (NSString *)nullToEmpty {
+    NSNull *null = [self copy];
+    if (!null) {
+        return @"";
     }
-    
-    return indexPaths;
+    return @"";
 }
 
 @end
+
+
+//----------------------------------------------------------------------------------------------------------------------
+

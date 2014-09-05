@@ -46,25 +46,3 @@
 //- (NSString *)stringBreakToFitWidth:(CGFloat)width maxLine:(NSInteger)maxLine attribute:(NSMutableDictionary *)attributes;
 
 @end
-
-//--------------------------------------------------------------------------------------------------
-#pragma mark - NSData Category
-//--------------------------------------------------------------------------------------------------
-@interface NSData (Extension)
-
-- (NSString *)stringFromData;
-
-- (NSString *)stringWithUTF8Data;
-
-@end
-
-//--------------------------------------------------------------------------------------------------
-#pragma mark - NSNull Category
-//--------------------------------------------------------------------------------------------------
-@interface NSNull (Extension)
-
-- (NSString *)nullToEmpty;
-
-@end
-
-//--------------------------------------------------------------------------------------------------

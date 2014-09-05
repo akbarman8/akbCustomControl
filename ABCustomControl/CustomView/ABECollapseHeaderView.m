@@ -22,13 +22,10 @@
 @implementation ABECollapseHeaderView
 
 + (ABECollapseHeaderView*)expandableHeaderViewWithSection:(NSInteger)section {
-    static ABECollapseHeaderView* headerView = nil;
-    if (!headerView) {
-        NSArray* nibObjects = [[NSBundle mainBundleCore] loadNibNamed:@"ABECollapseHeaderView"
-                                                                owner:nil
-                                                              options:nil];
-        headerView = [nibObjects objectAtIndex:0];
-    }
+    NSArray* nibObjects = [[NSBundle mainBundleCore] loadNibNamed:@"ABECollapseHeaderView"
+                                                        owner:nil
+                                                      options:nil];
+	ABECollapseHeaderView* headerView = [nibObjects objectAtIndex:0];
 	return headerView;
 }
 

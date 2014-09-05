@@ -33,6 +33,8 @@
 		286A703F19B9518D00A4F3D1 /* sectionheader@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 286A703719B9518D00A4F3D1 /* sectionheader@2x.png */; };
 		286A704019B9518D00A4F3D1 /* sectionlist.png in Resources */ = {isa = PBXBuildFile; fileRef = 286A703819B9518D00A4F3D1 /* sectionlist.png */; };
 		286A704119B9518D00A4F3D1 /* sectionlist2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 286A703919B9518D00A4F3D1 /* sectionlist2x.png */; };
+		286A704419B968F700A4F3D1 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 286A704219B968F700A4F3D1 /* background.png */; };
+		286A704519B968F700A4F3D1 /* cellBg.png in Resources */ = {isa = PBXBuildFile; fileRef = 286A704319B968F700A4F3D1 /* cellBg.png */; };
 		28EF46B719A783A40064A177 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28EF46B619A783A40064A177 /* Foundation.framework */; };
 /* End PBXBuildFile section */
 
@@ -75,6 +77,8 @@
 		286A703719B9518D00A4F3D1 /* sectionheader@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sectionheader@2x.png"; sourceTree = "<group>"; };
 		286A703819B9518D00A4F3D1 /* sectionlist.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sectionlist.png; sourceTree = "<group>"; };
 		286A703919B9518D00A4F3D1 /* sectionlist2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sectionlist2x.png; sourceTree = "<group>"; };
+		286A704219B968F700A4F3D1 /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
+		286A704319B968F700A4F3D1 /* cellBg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cellBg.png; sourceTree = "<group>"; };
 		28EF46B319A783A40064A177 /* libABCustomControl.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libABCustomControl.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		28EF46B619A783A40064A177 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		28EF46C419A783A40064A177 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -153,6 +157,8 @@
 		28254B1419B8186F00BDFEC6 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				286A704219B968F700A4F3D1 /* background.png */,
+				286A704319B968F700A4F3D1 /* cellBg.png */,
 				286A703219B9518D00A4F3D1 /* sectionarrow_down.png */,
 				286A703319B9518D00A4F3D1 /* sectionarrow_down@2x.png */,
 				286A703419B9518D00A4F3D1 /* sectionheader_blue.png */,
@@ -181,14 +187,22 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		28EF46AA19A783A40064A177 = {
+		286A704619B9691000A4F3D1 /* Pod-Spec */ = {
 			isa = PBXGroup;
 			children = (
 				28EF475519A792930064A177 /* Podfile */,
 				284DD73919A7BBAE00CC416D /* ABCustomControl.podspec */,
+			);
+			name = "Pod-Spec";
+			sourceTree = "<group>";
+		};
+		28EF46AA19A783A40064A177 = {
+			isa = PBXGroup;
+			children = (
 				28254AFE19B8186F00BDFEC6 /* ABCustomControl */,
 				286A702719B9514200A4F3D1 /* ABResourceBundle */,
 				28EF46B519A783A40064A177 /* Frameworks */,
+				286A704619B9691000A4F3D1 /* Pod-Spec */,
 				28EF46B419A783A40064A177 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -316,11 +330,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				286A703E19B9518D00A4F3D1 /* sectionheader.png in Resources */,
+				286A704419B968F700A4F3D1 /* background.png in Resources */,
 				286A703F19B9518D00A4F3D1 /* sectionheader@2x.png in Resources */,
 				286A703119B9517200A4F3D1 /* ABECollapseHeaderView.xib in Resources */,
 				286A704019B9518D00A4F3D1 /* sectionlist.png in Resources */,
 				286A704119B9518D00A4F3D1 /* sectionlist2x.png in Resources */,
 				286A703A19B9518D00A4F3D1 /* sectionarrow_down.png in Resources */,
+				286A704519B968F700A4F3D1 /* cellBg.png in Resources */,
 				286A703C19B9518D00A4F3D1 /* sectionheader_blue.png in Resources */,
 				286A703B19B9518D00A4F3D1 /* sectionarrow_down@2x.png in Resources */,
 				286A703D19B9518D00A4F3D1 /* sectionheader_blue@2x.png in Resources */,
@@ -503,6 +519,7 @@
 				286A702C19B9514200A4F3D1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		28EF46AE19A783A40064A177 /* Build configuration list for PBXProject "ABCustomControl" */ = {
 			isa = XCConfigurationList;
