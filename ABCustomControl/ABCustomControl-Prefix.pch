@@ -6,4 +6,13 @@
 
 #ifdef __OBJC__
     #import <Foundation/Foundation.h>
+    #import <UIKit/UIKit.h>
 #endif
+
+#define SAFE_RELEASE(obj)       obj = nil;
+#define FORMAT(...)             [NSString stringWithFormat:__VA_ARGS__]
+#define EMPTY_STRING            @""
+#define EXECUTE_BLOCK_ON_BG_THREAD(block) dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_LOW, 0), block)
+#define EXECUTE_BLOCK_ON_MAIN_THREAD(block) dispatch_sync(dispatch_get_main_queue(), block)
+
+//----------------------------------------------------------------------------------------------------------------------

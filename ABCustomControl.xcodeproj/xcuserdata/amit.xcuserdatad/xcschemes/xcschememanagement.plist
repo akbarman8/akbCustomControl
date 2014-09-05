@@ -4,14 +4,44 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>ABCustomControl.xcscheme</key>
+		<key>ABCustomControl.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
+		<key>ABResourceBundle.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>4</integer>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>284DD74919A83FBB00CC416D</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>284DD75319A83FBB00CC416D</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>284DD76519A840C000CC416D</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>286A701819B942BE00A4F3D1</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>286A702519B9514200A4F3D1</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>28EF46B219A783A40064A177</key>
 		<dict>
 			<key>primary</key>

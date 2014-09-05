@@ -1,8 +1,8 @@
 platform :ios, '6.0'
 
- podspec :path => 'CustomControl.podspec'
+podspec :path => 'ABCustomControl.podspec'
 
- link_with 'ABCustomControlTests'
+link_with 'ABCustomControlTests'
 
 # Append to your Podfile
 post_install do |installer_representation|
